@@ -471,7 +471,8 @@ template {
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  font-family: 'dm'}
 
 body {
   width: 100%;
@@ -511,12 +512,12 @@ img {
   user-select: none;
   -webkit-user-drag: none; }
 
-main .header {
+.header {
   margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between; }
-  main .header__nav ul {
+    .header__nav ul {
     display: flex;
     align-items: center;
     gap: 50px; }
