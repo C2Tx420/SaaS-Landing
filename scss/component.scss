@@ -1,0 +1,51 @@
+.b{
+    font-family: 'dmB';
+}
+.btn{
+    color: $main-cl;
+    background-color: unset;
+    border: none;
+    text-align: center;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.531474px;
+    border-radius: 10px;
+    cursor: pointer;
+    &.main-cl{
+        background-color: $main-cl;
+        color: $white-cl;
+    }
+    &.second-cl{
+        background-color: $second-cl;
+        color: $white-cl;
+    }
+    &.card-cl{
+        background-color: #9F3919;
+        color: $white-cl;
+    }
+    &.size-m{
+        padding: 19px 52px;
+    }
+    &.size-l{
+        padding: 19px 60px;
+    }
+}
+.content{
+    &__title{
+        font-family: 'dmB';
+        font-size: 8rem;
+        line-height: 96%;
+        letter-spacing: -2.50105px;
+
+        color: $text-cl;
+    }
+    &__desc{
+            font-size: 2rem;
+            line-height: 150%;
+            letter-spacing: -0.625263px;
+            color: $text2-cl;
+            
+            padding-top: 30px;
+            padding-bottom: 50px;
+    }
+}
