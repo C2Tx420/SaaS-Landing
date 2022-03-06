@@ -40,12 +40,29 @@
         color: $text-cl;
     }
     &__desc{
-            font-size: 2rem;
-            line-height: 150%;
-            letter-spacing: -0.625263px;
-            color: $text2-cl;
+        font-family: 'ml';
+        font-size: 2rem;
+        line-height: 150%;
+        letter-spacing: -0.625263px;
+        color: $text2-cl;
             
-            padding-top: 30px;
-            padding-bottom: 50px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    &.item__content &__title{
+        font-size: 2.4rem;
+        line-height: 150%;
+
+        text-align: center;
+        letter-spacing: -0.750316px;
+    }
+    &.item__content &__desc{
+        font-size: 1.6rem;
+        line-height: 150%;
+
+        text-align: center;
+        letter-spacing: -0.500211px;
+
+        padding: 20px 0;
     }
 }

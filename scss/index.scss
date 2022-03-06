@@ -118,6 +118,9 @@ img{
                 }
             }
         }
+        @include sm{
+            display: none;
+        }
     }
 }
 
@@ -149,6 +152,116 @@ main{
             justify-content: center;
             gap: unset;
             justify-content: space-between;
+        }
+    }
+    .intro{
+        &__wrap{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            gap: 165.5px;
+            &:first-child{
+                flex-direction: row-reverse;
+                margin-bottom: 80px;
+            }
+        }
+        &__block{
+            max-width: 556px;
+            &-title{
+                font-size: 5rem;
+            }
+        }
+        &__img{
+            max-height: 473px;
+            max-width: 348px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+    }
+    .item{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 75px;
+
+        padding: 150px 0;
+        &__block{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            max-width: 307px;
+            &-img{
+                width: 151px;
+                height: 97px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        @include sm{
+            justify-content: center;
+        }
+    }
+    .pricing{
+        &__heading{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 82px;
+
+            &-title{
+                font-size: 6rem;
+                line-height: 117%;
+
+                letter-spacing: -1.87579px;
+                max-width: 523px;
+            }
+            &-btn{
+                padding: 16px 56px;
+                background-color: #F7F7FB;
+                &:first-child{
+                    border-radius: 10px 0px 0px 10px;
+                }
+                &:last-child{
+                    border-radius: 0px 10px 10px 0px;
+                }
+                &.active{
+                    background-color: $main-cl;
+                    color: $white-cl;
+                }
+            }
+        }
+        &__body{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        &__card{
+            background-color: #F8F8F8;
+            border-radius: 10px;
+            padding: 34px 24px 27px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-info{
+                ul{
+                    li{
+                        text-align: center;
+                    }
+                }
+            }
+            &-btn{
+                background-color: $white-cl;
+                width: 285px;
+                padding: 19px;
+            }
         }
     }
 }
