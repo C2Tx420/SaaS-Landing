@@ -27,6 +27,22 @@ $lg-max: ($lg-min - 1);
 
     // Genaral Variable
 
+    --h3-fz:8rem;
+    --h3-lh:96%;
+    --hero-title-fz:5rem;
+
+    --text-fz:2rem;
+    --text-lh:150%;
+
+    --card-title-fz: 1.8rem;
+    --card-title-lh: 156%;
+    --card-price-fz: 6rem;
+    --card-price-lh: 93%;
+    --card-heading-fz:6rem;
+    --card-heading-lh:117%;
+    --card-price-span-fz: 2.8rem;
+    --card-price-span-lh: 200%;
+
     --gap: 30px; // gap container, container-fluid
 
     --height-header: 80px;
@@ -34,18 +50,34 @@ $lg-max: ($lg-min - 1);
     --pd-section: 100px;
 
     @media (max-width: $sm-max) {
+        --h3-fz: 6rem;
+        --hero-title-fz:4rem;
+        --text-fz:1.8rem;
+        --card-price-fz: 5rem;
+        --card-heading-fz:5rem;
+        --card-price-span-fz: 2.4rem;
         --pd-section: 50px;
        
     }
     @media (max-width: $xs-max) {
-
+        --h3-fz: 4rem;
+        --hero-title-fz:3rem;
+        --text-fz: 1.6rem;
+        --card-price-fz: 4rem;
+        --card-heading-fz:4rem;
+        --card-price-span-fz: 2rem;
         --height-header: 70px;
         --height-footer: 100px;
         --pd-section: 50px;
         --ptop: 120px;
     }
     @media (max-width: $xxs-max) {
-
+        --h3-fz: 3rem;
+        --hero-title-fz:2rem;
+        --text-fz:1.4rem;
+        --card-price-fz: 3rem;
+        --card-heading-fz:3rem;
+        --card-price-span-fz: 1.4rem;
         --height-header: 50px;
     }
 }

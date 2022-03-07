@@ -71,7 +71,7 @@ img{
 }
 
 .header{
-    margin-top: 30px;
+    padding-top: 30px;
 
     & .container{
         display: flex;
@@ -118,12 +118,136 @@ img{
                 }
             }
         }
-        @include sm{
+    }
+    &__hamburger{
+        display: none;
+    }
+    @include md{
+        &__nav{
             display: none;
         }
+        &__btn{
+            display: none;
+        }
+        &__hamburger{
+            display: block;
+        }
+        &__hamburger {
+            display: block;
+            height: 23px;
+            width: 35px;
+            // position: absolute;
+            // top: 17px;
+            // left: 20px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+          }
+        
+          &__hamburger .line {
+            display: block;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background: #333;
+          }
+        
+          &__hamburger .line1 {
+            transform-origin: 0% 0%;
+            transition: transform 0.4s ease-in-out;
+          }
+        
+          &__hamburger .line2 {
+            transition: transform 0.2s ease-in-out;
+          }
+        
+          &__hamburger .line3 {
+            transform-origin: 0% 100%;
+            transition: transform 0.4s ease-in-out;
+          }
+          &__hamburger.active{
+              position: fixed;
+              right: 60px;
+          }
+          &__hamburger.active .line1 {
+            transform: rotate(35deg);
+          }
+        
+          &__hamburger.active .line2 {
+            transform: scaleY(0);
+          }
+        
+          &__hamburger.active .line3 {
+            transform: rotate(-35deg);
+          }
     }
 }
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
+    background-color: $white-cl;
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s;
+    ul{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        height: 100%;
+    li{
+        padding: 20px 0;
+        width: 100%;
+        text-align: center;
+        a{
+        width: 100%;
+            text-decoration: none;
+            color: $text2-cl;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            letter-spacing: -0.468947px;
+
+            position: relative;
+            transition: .3s;
+            &::after{
+                content: '';
+                display: block;
+                background-color: $main-cl;
+                height: 2px;
+                width: 0;
+
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                transition: .3s;
+                @include visible(0)
+            }
+        }
+        a:hover,a.active{
+            color: $text-cl;
+            transition: .3s;
+            &::after{
+                transition: .3s;
+                width: 100%;
+                @include visible(1)
+            }
+        }
+    }
+    }
+    &.active{
+        opacity: 1;
+        transition: .3s;
+    }
+}
 main{
     .hero{
         padding: var(--pd-section) 0;
@@ -153,6 +277,10 @@ main{
             gap: unset;
             justify-content: space-between;
         }
+        @include xs{
+            gap: 30px;
+            justify-content: center;
+        }
     }
     .intro{
         &__wrap{
@@ -169,7 +297,7 @@ main{
         &__block{
             max-width: 556px;
             &-title{
-                font-size: 5rem;
+                font-size: var(--hero-title-fz);
             }
         }
         &__img{
@@ -180,7 +308,19 @@ main{
                 height: 100%;
             }
         }
-        
+        @include xs{
+            &__wrap{
+                flex-direction: column;
+                gap: 20px;
+                &:first-child{
+                    flex-direction: column;
+                }
+            }
+            &__img{
+                width: 50%;
+                height: 50%;
+            }
+        }
     }
     .item{
         display: flex;
@@ -215,8 +355,8 @@ main{
             align-items: center;
 
             &-title{
-                font-size: 6rem;
-                line-height: 117%;
+                font-size: var(--card-heading-fz);
+                line-height: var(--card-heading-lh);
 
                 letter-spacing: -1.87579px;
                 max-width: 523px;
@@ -257,8 +397,8 @@ main{
             flex-direction: column;
             align-items: center;
             &-title{
-                font-size: 18px;
-                line-height: 156%;
+                font-size: var(--card-title-fz);
+                line-height: var(--card-title-lh);
                 text-align: center;
                 letter-spacing: -0.562737px;
                 color: $text2-cl;
@@ -267,14 +407,15 @@ main{
             }
             &-price{
                 font-family: 'dmB';
-
-                font-size: 60px;
-                line-height: 93%;
-                text-align: center;
-                letter-spacing: -1.03448px;
+                h4{
+                    font-size: var(--card-price-fz);
+                    line-height: var(--card-price-lh);
+                    text-align: center;
+                    letter-spacing: -1.03448px;
+                }
                 span{
-                    font-size: 28px;
-                    line-height: 200%;
+                    font-size: var(--card-price-span-fz);
+                    line-height: var(--card-price-span-lh);
                     letter-spacing: -1.03448px;
                 }
             }
@@ -316,6 +457,19 @@ main{
                         opacity:.8;
                     }
                 }
+            }
+        }
+        @include md{
+            &__heading{
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+        }
+        @include sm{
+            &__body{
+                flex-direction: column;
+                gap: 20px;
             }
         }
     }

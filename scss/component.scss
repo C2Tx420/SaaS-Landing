@@ -41,16 +41,16 @@
 .content{
     &__title{
         font-family: 'dmB';
-        font-size: 8rem;
-        line-height: 96%;
+        font-size: var(--h3-fz);
+        line-height: var(--h3-lh);
         letter-spacing: -2.50105px;
 
         color: $text-cl;
     }
     &__desc{
         font-family: 'ml';
-        font-size: 2rem;
-        line-height: 150%;
+        font-size: var(--text-fz);
+        line-height: var(--text-lh);
         letter-spacing: -0.625263px;
         color: $text2-cl;
             
