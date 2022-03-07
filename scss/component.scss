@@ -14,10 +14,18 @@
     &.main-cl{
         background-color: $main-cl;
         color: $white-cl;
+        &:hover{
+            background-color: $main-cl;
+            opacity:.8;
+        }
     }
     &.second-cl{
         background-color: $second-cl;
         color: $white-cl;
+        &:hover{
+            background-color: $second-cl;
+            opacity:.8;
+        }
     }
     &.card-cl{
         background-color: #9F3919;

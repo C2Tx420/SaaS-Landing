@@ -186,7 +186,7 @@ main{
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        gap: 75px;
+        //gap: 75px;
 
         padding: 150px 0;
         &__block{
@@ -213,7 +213,6 @@ main{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 82px;
 
             &-title{
                 font-size: 6rem;
@@ -230,17 +229,24 @@ main{
                 }
                 &:last-child{
                     border-radius: 0px 10px 10px 0px;
+                    margin-left: -2px;
                 }
-                &.active{
+                    &.active,&.active:hover{
                     background-color: $main-cl;
                     color: $white-cl;
+                }
+                &:hover{
+                    opacity:.8;
+                    background-color:#ccc;
                 }
             }
         }
         &__body{
             display: flex;
             align-items: center;
-            gap: 15px;
+            justify-content:space-evenly;
+
+            padding: 80px 0 158px;
         }
         &__card{
             background-color: #F8F8F8;
@@ -250,10 +256,38 @@ main{
             display: flex;
             flex-direction: column;
             align-items: center;
+            &-title{
+                font-size: 18px;
+                line-height: 156%;
+                text-align: center;
+                letter-spacing: -0.562737px;
+                color: $text2-cl;
+
+                padding-bottom: 22px;
+            }
+            &-price{
+                font-family: 'dmB';
+
+                font-size: 60px;
+                line-height: 93%;
+                text-align: center;
+                letter-spacing: -1.03448px;
+                span{
+                    font-size: 28px;
+                    line-height: 200%;
+                    letter-spacing: -1.03448px;
+                }
+            }
             &-info{
+                padding: 28px 0 36px;
                 ul{
                     li{
+                        font-family: 'ml';
                         text-align: center;
+                        font-size: 17px;
+                        line-height: 294%;
+                        letter-spacing: -0.531474px;
+                        color: $text2-cl;
                     }
                 }
             }
@@ -261,6 +295,27 @@ main{
                 background-color: $white-cl;
                 width: 285px;
                 padding: 19px;
+                &:hover{
+                    background-color:#ccc;
+                    opacity:.8;
+                }
+            }
+            &.active{
+                background-color:$second-cl;
+                padding: 50px 37px 43px;
+                .pricing__card-title{
+                    color: rgba(255, 255, 255, 0.7);;
+                }
+                .pricing__card-price,.pricing__card-info ul li{
+                    color: $white-cl;
+                }
+                .pricing__card-btn{
+                    background-color:#9F3919;
+                    color: $white-cl;
+                    &:hover{
+                        opacity:.8;
+                    }
+                }
             }
         }
     }
