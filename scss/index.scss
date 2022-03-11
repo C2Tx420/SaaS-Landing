@@ -139,7 +139,7 @@ img{
             // position: absolute;
             // top: 17px;
             // left: 20px;
-            z-index: 2;
+            z-index: 500;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -167,10 +167,6 @@ img{
             transform-origin: 0% 100%;
             transition: transform 0.4s ease-in-out;
           }
-          &__hamburger.active{
-              position: fixed;
-              right: 60px;
-          }
           &__hamburger.active .line1 {
             transform: rotate(35deg);
           }
@@ -195,6 +191,7 @@ img{
     pointer-events: none;
     opacity: 0;
     transition: .3s;
+    z-index:499;
     ul{
         display: flex;
         align-items: center;
@@ -244,6 +241,7 @@ img{
     }
     }
     &.active{
+        pointer-events: auto;
         opacity: 1;
         transition: .3s;
     }
@@ -261,6 +259,13 @@ main{
             img{
                 width: 100%;
                 height: 100%;
+            }
+        }
+        @include xs{
+            flex-direction: column-reverse;
+            gap: 20px;
+            &__img{
+                height:200px
             }
         }
     }
@@ -346,6 +351,9 @@ main{
         }
         @include sm{
             justify-content: center;
+        }
+        @include xs{
+            padding: 40px 0;
         }
     }
     .pricing{
@@ -470,6 +478,12 @@ main{
             &__body{
                 flex-direction: column;
                 gap: 20px;
+                padding: 60px 0 140px;
+            }
+        }
+        @include xs{
+            &__body{
+                padding: 20px 0 100px;
             }
         }
     }

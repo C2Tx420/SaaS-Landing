@@ -37,6 +37,26 @@
     &.size-l{
         padding: 19px 60px;
     }
+    @include sm{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        &.size-m{
+            padding: 16px 36px;
+        }
+        &.size-l{
+            padding: 16px 40px;
+        }
+    }
+    @include xs{
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        &.size-m{
+            padding: 12px 24px;
+        }
+        &.size-l{
+            padding: 12px 30px;
+        }
+    }
 }
 .content{
     &__title{
@@ -72,5 +92,11 @@
         letter-spacing: -0.500211px;
 
         padding: 20px 0;
+    }
+    @include sm{
+        &__desc{
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
     }
 }
